@@ -9,14 +9,22 @@
   </head>
   <body class="text-bg-secondary">
     <div class="container text-bg-secondary fs-3 py-5">
-      <form>
+      <form
+        action="/skills"
+        method="POST"
+        autocomplete="off"
+      >
         <div class="mb-3">
           <label for="inputSkill" class="form-label">New Skill To Add</label>
-          <input type="text" class="form-control w-50" id="inputSkill" name="skill">
+          <input type="text" class="form-control w-50" id="inputSkill" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="url" class="form-label">Docs URL</label>
+          <input type="text" class="form-control w-50" id="url" name="url">
         </div>
         <div class="mb-3">
           <label for="faLogo" class="form-label">Font Awesome Logo</label>
-          <input type="text" class="form-control w-50" id="faLogo">
+          <input type="text" class="form-control w-50" id="faLogo" name="falogo">
         </div>
         
         <button type="submit" class="btn btn btn-outline-light my-3">Submit</button>
