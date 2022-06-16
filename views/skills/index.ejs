@@ -15,15 +15,22 @@
     <div class="container d-flex justify-content-center">
       <ul class="list-group w-50">
         <% skills.forEach(skill => {%>
-          <li class="fs-3 list-group-item d-flex justify-content-evenly">
-            <i class="<%= skill.falogo %>"></i>
-            
-            <%= skill.name %> 
-            <form action="/skills/<%= skill._id %>?_method=DELETE" method="POST">
-              <button type="submit" class="btn btn-outline-danger btn-sm pl-3">x</button>
-            </form>
+          <li class="fs-3 list-group-item">
+            <div class="row">
+              <div class="col">
+                <i class="<%= skill.falogo %>"></i>
+              </div>
+              <div class="col">
+                <%= skill.name %> 
+              </div>
+              <div class="col d-flex justify-content-end">
+                <form action="/skills/<%= skill._id %>?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-outline-danger btn-sm pl-3">x</button>
+                </form>
+              </div>
           </li>
         <% }) %> 
+            </div>
       </ul>
     </div>
     <div class="d-flex justify-content-center">
