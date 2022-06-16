@@ -6,8 +6,10 @@ const router = Router()
 /* GET skills listing. */
 router.get('/', skillsCtrl.index)
 
+router.get('/new', skillsCtrl.new)
+
 
 
 export {
-  router,
+  router
 }
