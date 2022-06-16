@@ -30,3 +30,5 @@ let skills = [
     falogo: '<i class="fa-solid fa-database"></i>'
   }
 ]
+
+export { skills }
