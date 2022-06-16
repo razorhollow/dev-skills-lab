@@ -13,12 +13,15 @@
   <div class="container text-bg-secondary">
     <h1 class="text-center pb-3 fs-1">My Skills</h1>
     <div class="container d-flex justify-content-center">
-      <ul class="list-group ">
+      <ul class="list-group w-50">
         <% skills.forEach(skill => {%>
-          <li class="fs-3 list-group-item">
+          <li class="fs-3 list-group-item d-flex justify-content-evenly">
             <i class="<%= skill.falogo %>"></i>
-            |
+            
             <%= skill.name %> 
+            <form action="/skills/<%= skill._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-outline-danger btn-sm pl-3">x</button>
+            </form>
           </li>
         <% }) %> 
       </ul>
