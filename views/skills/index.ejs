@@ -21,7 +21,7 @@
                 <i class="<%= skill.falogo %>"></i>
               </div>
               <div class="col">
-                <%= skill.name %> 
+                <a href="/skills/<%= skill._id %>" class="text-decoration-none text-dark"><%= skill.name %></a>
               </div>
               <div class="col d-flex justify-content-end">
                 <form action="/skills/<%= skill._id %>?_method=DELETE" method="POST">
