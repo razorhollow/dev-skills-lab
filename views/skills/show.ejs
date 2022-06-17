@@ -16,6 +16,16 @@
     <h3>Name: <span class="border border-white"><%= skill.name %></span> </h3>
     <h3>Docs Location: <span class="border border-white"><%= skill.url %></span> </h3>
     <h3>Skill Font-Awesome Code: <span class="border border-white"><%= skill.falogo %></span></h3>
+    <form action="/skills/<%= skill._id %>?_method=DELETE" method="POST">
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn btn-outline-danger text-white border-white my-3 w-100">Delete Skill</button>
+        </div>
+        <div class="col">
+          <a href="/skills" type="button" class="btn btn-outline-light mt-3 mb-3 w-100">Return To List</a>
+        </div>
+      </div>
+  </form>
   </div>
 </body>
 </html>
